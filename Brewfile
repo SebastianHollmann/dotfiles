@@ -1,4 +1,5 @@
 brew "duckdb"
+brew "eza"
 brew "fd"
 brew "gcc"
 brew "gh"
