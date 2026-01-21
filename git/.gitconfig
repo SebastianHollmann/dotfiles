@@ -1,0 +1,16 @@
+[user]
+    name = Sebastian Hollmann
+    email = hollmannq@gmail.com
+
+[core]
+    # Set Neovim as default editor for git messages
+    editor = nvim
+
+[alias]
+    # Short aliases for common commands
+    s = status
+    co = checkout
+    br = branch
+    c = commit
+    p = push
+    l = log --oneline --graph --decorate
