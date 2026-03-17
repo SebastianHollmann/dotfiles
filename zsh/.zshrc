@@ -51,5 +51,23 @@ alias cp="cp -i"
 alias mv="mv -i"
 
 # --- Shortcuts ---
-alias v="nvim"
-alias vim="nvim"
+# Custom function to open nvim in a new Ghostty tab
+nv() {
+    if [ -z "$1" ]; then
+        # If no filename is provided, just open a blank nvim in a new tab
+        ghostty +open --command="nvim"
+    else
+        # Open the specific file in a new tab
+        ghostty +open --command="nvim $1"
+    fi
+}
+
+# Set standard shortcuts to use the function
+alias v="nv"
+alias vi="nv"
+alias vim="nv"
+alias nvim="nv"
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+. "$HOME/.local/bin/env"
